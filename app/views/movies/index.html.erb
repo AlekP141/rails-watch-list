@@ -1,0 +1,22 @@
+<div class="container row mt-5 justify-content-center">
+  <h1 class="text-center">Movies</h1>
+  <% @movies.each do |movie| %>
+  <%= link_to movie_path(movie), class: "card py-3 m-2", style: "width: 18rem; text-decoration: none; color: black;" do %>
+    <img src= <%= movie.poster_url %> class="card-img-top" alt="<%= movie.title %> poster">
+    <div class="card-body">
+      <h5 class="card-title" style="
+      display: -webkit-box;
+      overflow: hidden;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;"><%= movie.title %></h5>
+      <p class="card-text" style="
+      display: -webkit-box;
+      overflow: hidden;
+      -webkit-line-clamp: 4;
+      -webkit-box-orient: vertical;"
+      ><%= movie.overview %></p>
+      <p><%= movie.rating %>/10</p>
+    </div>
+  <% end %>
+  <% end %>
+</div>

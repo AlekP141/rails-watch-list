@@ -1,0 +1,11 @@
+<div class="container mt-5">
+  <h1>Lists</h1>
+  <%= link_to "➕ Add a new list", new_list_path %>
+  <ol class="list-group list-group-numbered">
+    <% @lists.each do |list| %>
+    <li class="list-group-item my-3">
+      <%= link_to list.name, list_path(list), style: "color: black; text-decoration: none;" %>
+    </li>
+    <% end %>
+  </ol>
+</div>
