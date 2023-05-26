@@ -1,5 +1,6 @@
 <div class="container row mt-5 justify-content-center">
   <h1 class="text-center"><%= @list.name %></h1>
+  <%= cl_image_tag @list.photo.key, class: "list-image my-3", crop: :fill %>
   <%= link_to "➕ Add new movie", new_list_bookmark_path(@list), class: "text-center" %>
   <% @list.bookmarks.each do |bookmark| %>
   <div class="card py-3 m-2", style="width: 18rem; text-decoration: none; color: black;">
