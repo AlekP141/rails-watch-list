@@ -1,7 +1,7 @@
 <div class="container row mt-5 justify-content-center">
   <h1 class="text-center"><%= @list.name %></h1>
   <% if @list.photo.attached? %>
-    <%= cl_image_tag @list.photo.key, class: "list-image my-3", crop: :fill %>
+    <%= cl_image_tag @list.photo.key, class: "list-image my-3" %>
   <% else %>
     <img class="list-image my-3"src="https://res.cloudinary.com/dffuztdno/image/upload/v1685108978/default_h8iuth.jpg">
   <% end %>
